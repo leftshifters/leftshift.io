@@ -1,0 +1,4 @@
+*.psd
+*.pxm
+node_modules
+logs

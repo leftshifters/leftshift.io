@@ -22,13 +22,13 @@ var projects = require('./projects').get();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use(favicon(path.join(__dirname, '/public/images/favicon.ico')))
 app.use(logger('dev'))
 app.use(methodOverride())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('public'))
 app.use(compression());
 
 // development only

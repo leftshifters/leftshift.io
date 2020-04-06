@@ -19,7 +19,7 @@ var errorHandler = require("errorhandler");
 var projects = require("./projects").get();
 
 // all environments
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8080);
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 app.use(favicon(path.join(__dirname, "/public/images/favicon.ico")));

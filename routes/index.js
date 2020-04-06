@@ -1,5 +1,5 @@
 var posts = require("../blog");
-var markdown = require("markdown").markdown;
+var marked = require("marked");
 var fs = require("fs");
 var _ = require("underscore");
 
@@ -80,7 +80,7 @@ exports.post = function (req, res) {
           description: post.description,
           author: post.author,
           date: post.date,
-          data: post.prepend + markdown.toHTML(data) + post.append,
+          data: post.prepend + marked(data) + post.append,
           tags: post.tags,
         });
       }

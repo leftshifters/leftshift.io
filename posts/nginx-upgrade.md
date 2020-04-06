@@ -13,43 +13,42 @@ All this means is that you need to be running the latest version of Nginx to avo
 
 The first thing is to find out which version are you on. Here's how you do it
 
-	nginx -v
+    nginx -v
 
 It should show you something like
 
-	nginx version: nginx/1.1.19
+    nginx version: nginx/1.1.19
 
 Now that we know that we need to upgrade, the first thing to do is to backup your configuration
 
-	sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1.1.19.backup
+    sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.1.1.19.backup
 
 Ok, moving on, first stop the nginx service
 
-	sudo service nginx stop
+    sudo service nginx stop
 
 Install the dependencies
 
-	sudo aptitude install python-software-properties
+    sudo aptitude install python-software-properties
 
 Add the repository for the stable version of Nginx
 
-	sudo add-apt-repository ppa:nginx/stable
+    sudo add-apt-repository ppa:nginx/stable
 
 Now the usual stuff, update aptitude and upgrade it
 
-	sudo aptitude update
-	sudo aptitude safe-upgrade
+    sudo aptitude update
+    sudo aptitude safe-upgrade
 
 When it asks you if you want to keep using the old config or get the new config, please select Y(es) and get the latest config.
 Finally, restart nginx
 
-	sudo service nginx restart
+    sudo service nginx restart
 
 If you ask nginx what version its on, here's what it would say
 
-	nginx -v
-	nginx version: nginx/1.4.7
-
+    nginx -v
+    nginx version: nginx/1.4.7
 
 That's it. Now you have the latest version of Nginx running on your servers.
 

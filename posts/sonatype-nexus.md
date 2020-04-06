@@ -1,8 +1,8 @@
 I was struggling with [Sonatype Nexus][nexus] since a week. There was three failed attempt to deploy it. Here's how I finally got it to work
 
-* Step #1 Installed [HomeBrew for Linux][brew].
-* Step #2 Installed Sonatype Nexus using ```brew install nexus```
-* Step #3 It was ready to go.
+- Step #1 Installed [HomeBrew for Linux][brew].
+- Step #2 Installed Sonatype Nexus using `brew install nexus`
+- Step #3 It was ready to go.
 
 #####Changes in Android's gradle file
 

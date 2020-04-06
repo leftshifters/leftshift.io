@@ -10,7 +10,7 @@ We are always looking to expand our core team and recruit some really smart and 
 
 You can find our current openings at [leftshift.recruiterbox.com](https://leftshift.recruiterbox.com)
 
-*Freshers* are welcome to apply, however we will expect that you have atleast done your college project in the domain that you are applying for.
+_Freshers_ are welcome to apply, however we will expect that you have atleast done your college project in the domain that you are applying for.
 
 If you have spent less than 6 months at your last company, please do not apply. We do not appreciate such behavior.
 

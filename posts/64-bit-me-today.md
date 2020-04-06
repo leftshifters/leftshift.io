@@ -16,40 +16,39 @@ But this form is ... special. The types of fields and the inputs they accept var
 
 The cleanest way to do this is fetching a regex from the server for every field. But due to some "technical difficulties" we were not able to do this. Instead we made an object that validates text input:
 
-	@interface FieldValidator : NSObject <NSCoding>
+    @interface FieldValidator : NSObject <NSCoding>
 
-	- (BOOL)validateInput:(NSString *)input error:(NSError **)error;
-		
-	@property NSInteger inputType;	// enum for various input types (numeric, alphanumeric, etc.)
-	@property float minimumAmount;	// The float value of the input must be more than this
-	@property float maximumAmount;	// The float value of the input must be less than this
-	@property NSRange lengthRange;	// For validating the length (number of characters)
-	
-	@end
+    - (BOOL)validateInput:(NSString *)input error:(NSError **)error;
+
+    @property NSInteger inputType;	// enum for various input types (numeric, alphanumeric, etc.)
+    @property float minimumAmount;	// The float value of the input must be more than this
+    @property float maximumAmount;	// The float value of the input must be less than this
+    @property NSRange lengthRange;	// For validating the length (number of characters)
+
+    @end
 
 Note the use of `NSRange` for validating the length of the input. `NSRange` is a Foundation struct with two fields:
 
-	typedef struct _NSRange {
-	    NSUInteger location;
-	    NSUInteger length;
-	} NSRange;
-
+    typedef struct _NSRange {
+        NSUInteger location;
+        NSUInteger length;
+    } NSRange;
 
 I cleverly used it in this app to validate the length of the input as such:
 
-	- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
-		BOOL valid = NO;
-		NSInteger length = [input length];
-		if (length > self.lengthRange.location && length < self.lengthRange.length) {
-			valid = YES;
-		}
-		...
-		return valid;
-	}
+    - (BOOL)validateInput:(NSString *)input error:(NSError **)error {
+    	BOOL valid = NO;
+    	NSInteger length = [input length];
+    	if (length > self.lengthRange.location && length < self.lengthRange.length) {
+    		valid = YES;
+    	}
+    	...
+    	return valid;
+    }
 
 Now you might be thinking of this as the programming equivalent of [hammering a nail with an old shoe](http://weblogs.asp.net/alex_papadimoulis/408925). And you are right. But I had my _reasons_.
 
-Some of these field validators are stored persistently using `NSCoding` and are bundled with the app for offline use. And NSRange has convenient functions to convert it to an object that can be archived with `NSCoding` and back:   
+Some of these field validators are stored persistently using `NSCoding` and are bundled with the app for offline use. And NSRange has convenient functions to convert it to an object that can be archived with `NSCoding` and back:  
 `NSString *NSStringFromRange(NSRange range);`  
 and `NSRange NSRangeFromString(NSString *aString);`
 
@@ -57,18 +56,18 @@ In other words, _laziness_. And the excuse for that -- _deadlines_.
 
 Now, there can be fields that do not really need to be validated for their length. Like names and addresses. A simple nil check suffices for these fields. For such fields the `location` field of the range is set to `NSNotFound`, a compile time constant:
 
-	- (BOOL)validateInput:(NSString *)input error:(NSError **)error {
-		BOOL valid = NO;
-		if (self.lengthRange.location != NSNotFound) {
-			// Do the validation
-			...
-		} else {
-			// No length validation required
-			valid = (input != nil);
-		}
-		...
-		return valid;
-	}
+    - (BOOL)validateInput:(NSString *)input error:(NSError **)error {
+    	BOOL valid = NO;
+    	if (self.lengthRange.location != NSNotFound) {
+    		// Do the validation
+    		...
+    	} else {
+    		// No length validation required
+    		valid = (input != nil);
+    	}
+    	...
+    	return valid;
+    }
 
 This all seemed to work wonderfully for me.
 
@@ -86,31 +85,30 @@ After numerous attempts of fixing this bug, I finally was able to reproduce it -
 
 The culprit was this check which was failing:
 
-		if (self.lengthRange.location != NSNotFound) {
-			// Do the validation
-			...
-		} else {
-			valid = (input != nil);
-		}
-
+    	if (self.lengthRange.location != NSNotFound) {
+    		// Do the validation
+    		...
+    	} else {
+    		valid = (input != nil);
+    	}
 
 ## But why?
 
 If you dig a little, you can see how `NSNotFound` is defined:
 
-	enum {NSNotFound = NSIntegerMax};
+    enum {NSNotFound = NSIntegerMax};
 
 `NSIntegerMax` itself is defined as:
 
-	#define NSIntegerMax    LONG_MAX
+    #define NSIntegerMax    LONG_MAX
 
 On 64 bit systems, its value is `9223372036854775807` and it is `2147483647` on the 32 bit systems (you can log this on iPhone 5 and 6 simulators to confirm).
 
 If you remember, we are shipping pre-archived field validation rules with the app. These validation rules were archived on a 32 bit system (iPhone 5 simulator) and added to the app. So ranges which had `NSNotFound` in them were saved as `{2147483647, <length>}`. On 64 bit systems, our check failed as it reached this line:
 
-	if (self.lengthRange.location != NSNotFound) {
-	// This translates to if (2147483647 != 9223372036854775807) {
-	// Which is always true
+    if (self.lengthRange.location != NSNotFound) {
+    // This translates to if (2147483647 != 9223372036854775807) {
+    // Which is always true
 
 This only happened on the first launch where the app used the bundled validation rules. These were re-fetched from the server and archived again, resulting in the _native_ value of `NSNotFound` to be saved. Hence this could never be reproduced on subsequent launches of the app.
 

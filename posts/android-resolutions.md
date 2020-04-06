@@ -12,53 +12,54 @@ Here is a full list
 
 - 480x800
 
-	- [Samsung Galaxy Grand I9082](http://www.gsmarena.com/samsung_galaxy_grand_i9082-5163.php)
-	- [Samsung Galaxy Win I8550](http://www.gsmarena.com/samsung_galaxy_win_i8550-5392.php)
-	- [Samsung Galaxy Core I8260](http://www.gsmarena.com/samsung_galaxy_core_i8260-5419.php)
-	- [Samsung Galaxy S II 4G I9100M](http://www.gsmarena.com/samsung_galaxy_s_ii_4g_i9100m-4059.php)
-	- [HTC Desire X](http://www.gsmarena.com/htc_desire_x-4951.php)
-	- [HTC One V](http://www.gsmarena.com/htc_one_v-4575.php)
+      	- [Samsung Galaxy Grand I9082](http://www.gsmarena.com/samsung_galaxy_grand_i9082-5163.php)
+      	- [Samsung Galaxy Win I8550](http://www.gsmarena.com/samsung_galaxy_win_i8550-5392.php)
+      	- [Samsung Galaxy Core I8260](http://www.gsmarena.com/samsung_galaxy_core_i8260-5419.php)
+      	- [Samsung Galaxy S II 4G I9100M](http://www.gsmarena.com/samsung_galaxy_s_ii_4g_i9100m-4059.php)
+      	- [HTC Desire X](http://www.gsmarena.com/htc_desire_x-4951.php)
+      	- [HTC One V](http://www.gsmarena.com/htc_one_v-4575.php)
 
 - 720x1280
 
-	- [Samsung Galaxy Note II N7100](http://www.gsmarena.com/samsung_galaxy_note_ii_n7100-4854.php)
-	- [Samsung I9300 Galaxy S III](http://www.gsmarena.com/samsung_i9300_galaxy_s_iii-4238.php)
-	- [HTC One X](http://www.att.com/esupport/article.jsp?sid=KB413691&cv=820#fbid=1U0uFxttVag)
-	- [HTC One X+](http://www.landofdroid.com/2012/htc-one-x-htc-pm63100-benchmarked-again/)
+      	- [Samsung Galaxy Note II N7100](http://www.gsmarena.com/samsung_galaxy_note_ii_n7100-4854.php)
+      	- [Samsung I9300 Galaxy S III](http://www.gsmarena.com/samsung_i9300_galaxy_s_iii-4238.php)
+      	- [HTC One X](http://www.att.com/esupport/article.jsp?sid=KB413691&cv=820#fbid=1U0uFxttVag)
+      	- [HTC One X+](http://www.landofdroid.com/2012/htc-one-x-htc-pm63100-benchmarked-again/)
 
 ##### 40% Market Share in Screen Resolution
 
 - 240x320
 
-	- [Samsung Galaxy Y S5360](http://www.gsmarena.com/samsung_galaxy_y_s5360-4117.php)
-	- [Samsung Galaxy Y Duos S6102](http://www.gsmarena.com/samsung_galaxy_y_duos_s6102-4385.php)
+      	- [Samsung Galaxy Y S5360](http://www.gsmarena.com/samsung_galaxy_y_s5360-4117.php)
+      	- [Samsung Galaxy Y Duos S6102](http://www.gsmarena.com/samsung_galaxy_y_duos_s6102-4385.php)
 
 - 320x480
 
-	- [Samsung Galaxy Ace S5830I](http://www.gsmarena.com/samsung_galaxy_ace_s5830i-4664.php)
-	- [Samsung Galaxy Ace Plus S7500](http://www.gsmarena.com/samsung_galaxy_ace_plus_s7500-4397.php)
-	- [Sony Xperia tipo](http://www.gsmarena.com/sony_xperia_tipo-4718.php)
+      	- [Samsung Galaxy Ace S5830I](http://www.gsmarena.com/samsung_galaxy_ace_s5830i-4664.php)
+      	- [Samsung Galaxy Ace Plus S7500](http://www.gsmarena.com/samsung_galaxy_ace_plus_s7500-4397.php)
+      	- [Sony Xperia tipo](http://www.gsmarena.com/sony_xperia_tipo-4718.php)
 
 - 540x960
 
-	- [Samsung Galaxy Mega 5.8 I9150](http://www.gsmarena.com/samsung_galaxy_mega_5_8_i9150-5396.php)
-	- [Samsung I9190 Galaxy S4 mini](http://www.gsmarena.com/samsung_i9190_galaxy_s4_mini-5375.php)
+      	- [Samsung Galaxy Mega 5.8 I9150](http://www.gsmarena.com/samsung_galaxy_mega_5_8_i9150-5396.php)
+      	- [Samsung I9190 Galaxy S4 mini](http://www.gsmarena.com/samsung_i9190_galaxy_s4_mini-5375.php)
 
 - 720x1184
 
-	- [Motorola Moto G](http://www.anandtech.com/show/7586/motorola-moto-g-review/7)
+      	- [Motorola Moto G](http://www.anandtech.com/show/7586/motorola-moto-g-review/7)
 
 - 768x1184
 
-	- [LG Nexus 4 E960](http://www.gsmarena.com/lg_nexus_4_e960-5048.php)
+      	- [LG Nexus 4 E960](http://www.gsmarena.com/lg_nexus_4_e960-5048.php)
 
 - 1080x1920
 
-	- [LG Nexus 5](http://www.gsmarena.com/lg_nexus_5-5705.php)
+      	- [LG Nexus 5](http://www.gsmarena.com/lg_nexus_5-5705.php)
 
 ##### 10% Market Share in Screen Resolution
+
 - All the other possible resolutions
 
-
 References
+
 1. [Google Dashboard : Screen Sizes and Densities](http://developer.android.com/about/dashboards/index.html#Screens)

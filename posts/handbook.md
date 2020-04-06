@@ -2,13 +2,13 @@ This is a ready reckoner for our rules, policies and some of the things that mig
 
 ### Trust
 
-1. Everything here works on *trust*.
+1. Everything here works on _trust_.
 
-2. Be it taking a book from the library, working from home, or taking some hardware home, you are free to do whatever makes you *most productive*, as long as it does not bother those around you.
+2. Be it taking a book from the library, working from home, or taking some hardware home, you are free to do whatever makes you _most productive_, as long as it does not bother those around you.
 
-3. We assume you are here to *make lovable apps*. If you are getting held back by anything or have suggestions for improvements, please meet up with Sudhanshu, and tell him. (*He can usually fix things*)
+3. We assume you are here to _make lovable apps_. If you are getting held back by anything or have suggestions for improvements, please meet up with Sudhanshu, and tell him. (_He can usually fix things_)
 
-4. As Uncle Ben said, *“With great power comes great responsibility.”* While you are here, please use *your best judgement*.
+4. As Uncle Ben said, _“With great power comes great responsibility.”_ While you are here, please use _your best judgement_.
 
 ### Flexible Working Hours
 
@@ -16,7 +16,7 @@ This is a ready reckoner for our rules, policies and some of the things that mig
 
 2. We don’t keep a track of how many hours you spent in office. We keep track of the work that you are doing. As long as the work is great, it’s all good.
 
-3. If you have stuff to do at home, you can come in early or leave late to avoid taking a half day off (*as long as work does not suffer*)
+3. If you have stuff to do at home, you can come in early or leave late to avoid taking a half day off (_as long as work does not suffer_)
 
 4. If you get to office after 1pm, please order a pizza.
 
@@ -24,43 +24,43 @@ This is a ready reckoner for our rules, policies and some of the things that mig
 
 ### Leave and Work From Home Policy
 
-1. We do not have a leave approval process. When you want to go on leave, you just need to *inform* your team that you will be on leave, and post it on #public-leaves on slack.
+1. We do not have a leave approval process. When you want to go on leave, you just need to _inform_ your team that you will be on leave, and post it on #public-leaves on slack.
 
 2. Since the decision about when to take a leave rests on you, please plan your leaves in a way that everyone on the project is not on leave at the same time.
 
-3. Everybody gets *20 paid leaves* in one financial year.
+3. Everybody gets _20 paid leaves_ in one financial year.
 
-4. The leaves are calculated on a *pro-rata* basis. So if you join on the 1st of October, you get 10 days of leave. (If you get a weird number, just round it to the closest half day)
+4. The leaves are calculated on a _pro-rata_ basis. So if you join on the 1st of October, you get 10 days of leave. (If you get a weird number, just round it to the closest half day)
 
-5. When you *resign*, leaves will again be calculated on a pro-rata basis. If you have used more than you have earned till then, they would be adjusted in your final settlement.
+5. When you _resign_, leaves will again be calculated on a pro-rata basis. If you have used more than you have earned till then, they would be adjusted in your final settlement.
 
-6. For leave with pay, *weekends and holidays* are *not* counted.
+6. For leave with pay, _weekends and holidays_ are _not_ counted.
 
-7. For leave without pay, *weekends and holidays* are counted. So if you take two months off, you will not be paid for weekends.
+7. For leave without pay, _weekends and holidays_ are counted. So if you take two months off, you will not be paid for weekends.
 
-8. Leaves should ideally be *planned* in advance, so that the work schedule doesn't suffer.
+8. Leaves should ideally be _planned_ in advance, so that the work schedule doesn't suffer.
 
-9. Leaves will *not be carried forward* to the next year. So make sure you pack your bags and go somewhere (Or just watch TV at home, that works too). We work hard as it is, taking some days off is always refreshing.
+9. Leaves will _not be carried forward_ to the next year. So make sure you pack your bags and go somewhere (Or just watch TV at home, that works too). We work hard as it is, taking some days off is always refreshing.
 
-10. All ladies would also be entitled to a paid *maternity leave* of 90 days, which would include weekends and holidays.
+10. All ladies would also be entitled to a paid _maternity leave_ of 90 days, which would include weekends and holidays.
 
-11. All ladies would also be entitled to a paid *maternity leave* of 21 days if they *legally adopt* a child (this too would include weekends and holidays).
+11. All ladies would also be entitled to a paid _maternity leave_ of 21 days if they _legally adopt_ a child (this too would include weekends and holidays).
 
-12. All men would be entitled to 3 days of paid *paternity leave*.
+12. All men would be entitled to 3 days of paid _paternity leave_.
 
-13. Everybody is entitled to 1/2 a day of *leave for voting* and other civic duties.
+13. Everybody is entitled to 1/2 a day of _leave for voting_ and other civic duties.
 
-14. Everybody is entitled to a *compensatory off* if they were pre-approved to work full time on a weekend or holiday. (Rule of thumb, you would know before hand if you get a comp off for a certain day or not)
+14. Everybody is entitled to a _compensatory off_ if they were pre-approved to work full time on a weekend or holiday. (Rule of thumb, you would know before hand if you get a comp off for a certain day or not)
 
-15. Everybody is entitled to *work from home*, if it is pre-planned and your work schedule has been defined. (Though we would love to see you in office)
+15. Everybody is entitled to _work from home_, if it is pre-planned and your work schedule has been defined. (Though we would love to see you in office)
 
-16. If you are *absent* without requesting for leave, it would be counted as leave without pay.
+16. If you are _absent_ without requesting for leave, it would be counted as leave without pay.
 
 ### Filing for Refunds for Official Trips
 
-1. When you pay for something, please make sure you keep the *physical bill*. If you get a *soft copy* of the bill, that would work as well.
+1. When you pay for something, please make sure you keep the _physical bill_. If you get a _soft copy_ of the bill, that would work as well.
 
-2. When you are back in office (*or anywhere for that matter*), head over to https://sheets.google.com and create a list of all your expenses, and break them under the following headings - Travel, Lodging, Food.
+2. When you are back in office (_or anywhere for that matter_), head over to https://sheets.google.com and create a list of all your expenses, and break them under the following headings - Travel, Lodging, Food.
 
 3. A sample refund sheet is given [here](https://docs.google.com/spreadsheets/d/1rxrx8gDOx4SXCpog4ajDsGnTHxoCLquVANdZCids6F0/edit).
 

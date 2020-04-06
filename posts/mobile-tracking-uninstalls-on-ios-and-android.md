@@ -2,7 +2,7 @@ You launch an app, invest a lot of resources, spend like crazy on marketing, add
 
 There is a way on both platforms (iOS and Android) which can be used to see who is uninstalling your app. Use of _push notification_. Yes, use of push notification at an _optimum frequency_ can help you _track uninstalls_. Once you know who has uninstalled, you can make use of user date store in your server to get in touch with the user.
 
-####Android
+#### Android
 
 Send a push notification to all users at a frequency (say, daily). Send a special parameter in the body to determine that the push notification is only for tracking uninstalls. You shouldn't show anything on the device for such kind of notification, just process it silently.
 
@@ -39,7 +39,7 @@ As you can clearly see, for the second id, it says that the device is not regist
 
 The next step would be to get a callback from the push notification service, find the user this id maps to and lets appsflyer and Mixpanel, GA or whatwever system you use.
 
-####iOS
+#### iOS
 
 Alright, so Android was easy, what about iOS.
 

@@ -4,7 +4,7 @@ I was struggling with [Sonatype Nexus][nexus] since a week. There was three fail
 - Step #2 Installed Sonatype Nexus using `brew install nexus`
 - Step #3 It was ready to go.
 
-#####Changes in Android's gradle file
+##### Changes in Android's gradle file
 
 The top-level build file is configured, by default, as-
 

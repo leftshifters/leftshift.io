@@ -1,51 +1,52 @@
-var posts = require("../blog");
-var marked = require("marked");
-var fs = require("fs");
-var _ = require("underscore");
+const marked = require("marked");
+const fs = require("fs");
+const _ = require("underscore");
 
-var clients = require("../clients");
-var projects = require("../projects").get();
-var team = require("../team").get();
+const posts = require("../content/posts");
+const clients = require("../content/clients");
+const projects = require("../content/projects").get();
+const team = require("../content/team").get();
 
-exports.healthcheck = function (req, res) {
+exports.healthcheck = (req, res) => {
   const healthCheckResponse = {
     status: "UP",
   };
   res.status(200).json(healthCheckResponse);
 };
 
-exports.index = function (req, res) {
+exports.index = (req, res) => {
   res.render("index", {
     title: "LeftShift | we create loveable apps for ios, android and the web",
     description:
       "Leftshift helps clients create loveable mobile applications for iOS, Android and the web",
     clients: clients.get(),
-    projects: projects,
-    team: team,
+    projects,
+    team,
   });
 };
 
-exports.sitemap = function (req, res) {
+exports.sitemap = (req, res) => {
   res.render("sitemap");
 };
 
-exports.blog = function (req, res) {
-  var page = req.params.page;
+exports.blog = (req, res) => {
+  let { page } = req.params;
   if (_.isUndefined(page)) page = 1;
+  // eslint-disable-next-line no-restricted-globals
   if (isNaN(page)) res.redirect("/blog");
   if (page < 0) res.redirect("/blog");
 
-  var articlesPerPage = 8;
-  var startPostNumber = (page - 1) * articlesPerPage;
+  const articlesPerPage = 8;
+  const startPostNumber = (page - 1) * articlesPerPage;
 
-  var previous = "";
-  var next = "";
+  let previous = "";
+  let next = "";
 
   if (page > 0) next = Number(page) + 1;
   if (page > 1) previous = Number(page) - 1;
 
-  var tempPosts = posts.get().slice();
-  var list = tempPosts.splice(startPostNumber, articlesPerPage);
+  const tempPosts = posts.get().slice();
+  const list = tempPosts.splice(startPostNumber, articlesPerPage);
 
   if (list.length < articlesPerPage) next = "";
 
@@ -54,65 +55,68 @@ exports.blog = function (req, res) {
   } else {
     res.render("bloghome", {
       posts: list,
-      title: "Home | Page " + page,
+      title: `Home | Page ${page}`,
       description: "The leftshift blog",
-      next: next,
-      previous: previous,
+      next,
+      previous,
     });
   }
 };
 
-exports.post = function (req, res) {
-  var tempPosts = posts.get().slice();
-  var post = _.find(tempPosts, function (selected) {
+exports.post = (req, res) => {
+  const tempPosts = posts.get().slice();
+  const post = _.find(tempPosts, (selected) => {
     return selected.slug === req.params.post;
   });
 
   if (!_.isEmpty(post)) {
-    fs.readFile(__dirname + "/../posts/" + post.file, "utf8", function (
-      err,
-      data
-    ) {
-      if (err) console.log(err);
-      else {
-        res.render(post.render, {
-          title: post.title,
-          description: post.description,
-          author: post.author,
-          date: post.date,
-          data: post.prepend + marked(data) + post.append,
-          tags: post.tags,
-        });
+    fs.readFile(
+      `${__dirname}/../content/markdown/${post.file}`,
+      "utf8",
+      (err, data) => {
+        // eslint-disable-next-line no-console
+        if (err) console.log(err);
+        else {
+          res.render(post.render, {
+            title: post.title,
+            description: post.description,
+            author: post.author,
+            date: post.date,
+            data: post.prepend + marked(data) + post.append,
+            tags: post.tags,
+          });
+        }
       }
-    });
+    );
   } else {
     res.render("404");
   }
 };
 
-exports.tags = function (req, res) {
-  var tag = req.params.tag;
+exports.tags = (req, res) => {
+  const { tag } = req.params;
 
-  var page = req.params.page;
+  let { page } = req.params;
   if (_.isUndefined(page)) page = 1;
+  // eslint-disable-next-line no-restricted-globals
   if (isNaN(page)) res.redirect("/blog");
   if (page < 0) res.redirect("/blog");
 
-  var articlesPerPage = 4;
-  var startPostNumber = (page - 1) * articlesPerPage;
+  const articlesPerPage = 4;
+  const startPostNumber = (page - 1) * articlesPerPage;
 
-  var previous = "";
-  var next = "";
+  let previous = "";
+  let next = "";
 
   if (page > 0) next = Number(page) + 1;
   if (page > 1) previous = Number(page) - 1;
 
-  var tempPosts = posts.get().slice();
-  tempPosts = _.filter(tempPosts, function (post) {
-    var indexOf = _.indexOf(post.tags, tag);
+  let tempPosts = posts.get().slice();
+  tempPosts = _.filter(tempPosts, (post) => {
+    const indexOf = _.indexOf(post.tags, tag);
     return indexOf >= 0;
   });
-  var list = tempPosts.splice(startPostNumber, articlesPerPage);
+  const list = tempPosts.splice(startPostNumber, articlesPerPage);
 
   if (list.length < articlesPerPage) next = "";
 
@@ -120,17 +124,17 @@ exports.tags = function (req, res) {
     res.render("404");
   } else {
     res.render("taghome", {
-      tag: tag,
+      tag,
       posts: list,
-      title: "Home | Page " + page,
+      title: `Home | Page ${page}`,
       description: "The leftshift blog",
-      next: next,
-      previous: previous,
+      next,
+      previous,
     });
   }
 };
 
-exports.love = function (req, res) {
+exports.love = (req, res) => {
   res.render("love", {
     title:
       "What has love got to do with making apps? | LeftShift | we create loveable apps for ios, android and the web",
@@ -140,13 +144,14 @@ exports.love = function (req, res) {
 };
 
 // Create pages for each projects
-exports.projectCaseStudy = function (req, res) {
-  var thisProject = {};
-  for (y in projects) {
+exports.projectCaseStudy = (req, res) => {
+  let thisProject = {};
+  const keys = Object.keys(projects);
+  keys.forEach((project) => {
     // We don't have trailing backslash, I'm just too lazy
-    if (projects[y].url == req.url) {
-      thisProject = projects[y];
+    if (projects[project].url === req.url) {
+      thisProject = projects[project];
+      res.render("project", thisProject);
     }
-  }
-  res.render("project", thisProject);
+  });
 };

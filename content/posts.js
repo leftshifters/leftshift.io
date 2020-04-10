@@ -1,4 +1,4 @@
-var posts = [
+const posts = [
   {
     title: "Tracking uninstalls on iOS and Android",
     description:
@@ -261,6 +261,6 @@ var posts = [
   },
 ];
 
-exports.get = function () {
+exports.get = () => {
   return posts;
 };

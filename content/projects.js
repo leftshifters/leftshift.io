@@ -1,4 +1,4 @@
-var projects = {
+const projects = {
   bookmyshow: {
     access: "bookmyshow",
     layout: "project1",
@@ -337,6 +337,6 @@ var projects = {
   },
 };
 
-exports.get = function () {
+exports.get = () => {
   return projects;
 };

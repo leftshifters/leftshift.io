@@ -1,4 +1,4 @@
-var clients = [
+const clients = [
   {
     name: "BookMyShow",
     logo: "/images/clients/bookmyshow.png",
@@ -121,6 +121,6 @@ var clients = [
   },
 ];
 
-exports.get = function () {
+exports.get = () => {
   return clients;
 };

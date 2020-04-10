@@ -4,7 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
+    "start": "node lib/app.js",
     "test": "jest --collect-coverage",
     "coverage": "open ./coverage/lcov-report/index.html",
     "lint": "eslint *.js content/**/*.js",

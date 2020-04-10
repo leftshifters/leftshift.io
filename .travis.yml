@@ -1,3 +1,11 @@
 language: node_js
 node_js:
   - 12.16.2
+services:
+  - docker
+deploy:
+  # Build Docker container and push to Docker Hub
+  provider: script
+  script: bash docker_ci_push.sh
+  on:
+    branch: master

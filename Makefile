@@ -7,15 +7,15 @@ cleanup: stop rm rmi
 
 build:
 	@echo "$(GREEN_COLOR)Building a docker image $(END_COLOR)"
-	docker build -t leftshifters/leftshiftio .
+	docker build -t leftshifters/leftshift.io .
 
 rmi:
 	@echo "Remove the image"
-	docker rmi leftshifters/leftshiftio
+	docker rmi leftshifters/leftshift.io
 
 run:
 	@echo "Run the container"
-	docker run -p 8080:8080 -d --name leftshift.io leftshifters/leftshiftio 
+	docker run -p 8080:8080 -d --name leftshift.io leftshifters/leftshift.io 
 
 start:
 	@echo "Start the container"

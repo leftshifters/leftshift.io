@@ -3,19 +3,23 @@
   "version": "1.1.9",
   "main": "app.js",
   "license": "MIT",
+  "docker": {
+    "group": "leftshifters",
+    "name": "leftshift.io",
+    "port": "8080"
+  },
   "scripts": {
     "start": "node lib/app.js",
     "test": "jest --collect-coverage",
     "coverage": "open ./coverage/lcov-report/index.html",
-    "lint": "eslint *.js content/**/*.js",
-    "build": "docker build -t leftshifters/leftshift.io .",
-    "rmi": "docker rmi leftshifters/leftshift.io",
-    "run": "docker run -p 8080:8080 -d --name leftshift.io leftshifters/leftshift.io",
-    "dstart": "docker start leftshift.io",
-    "stop": "docker stop leftshift.io",
-    "rm": "docker rm leftshift.io",
-    "logs": "docker logs leftshift.io",
-    "top": "docker top leftshift.io"
+    "lint": "eslint **/*.js --fix-dry-run",
+    "build": "docker build -t $npm_package_docker_group/$npm_package_docker_name:$(git describe --always --abbrev --tags --long) .",
+    "docker_tag": "docker tag $npm_package_docker_group/$npm_package_docker_name:$(git describe --always --abbrev --tags --long) $npm_package_docker_group/$npm_package_docker_name:latest",
+    "docker_rmi": "docker rmi $npm_package_docker_group/$npm_package_docker_name",
+    "docker_run": "docker run -p 8080:$npm_package_docker_port -d --name $npm_package_docker_name $npm_package_docker_group/$npm_package_docker_name",
+    "docker_stop": "docker stop $npm_package_docker_name",
+    "docker_rm": "docker rm $npm_package_docker_name",
+    "app_version": "echo $npm_package_version"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

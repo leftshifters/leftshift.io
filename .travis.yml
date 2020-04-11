@@ -6,6 +6,6 @@ services:
 deploy:
   # Build Docker container and push to Docker Hub
   provider: script
-  script: bash docker_ci_push.sh
+  script: bash scripts/ci_docker_push.sh
   on:
     branch: master

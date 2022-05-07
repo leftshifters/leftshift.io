@@ -1,13 +1,31 @@
 ---
+import "../styles/normalise.css";
+import "../styles/style.css";
+import "../styles/solarized_light.css";
 
+import Footer from '../layout/Footer.astro'
+import Header from '../layout/Header.astro'
+import Home from '../layout/Home.astro'
+import Love from '../layout/Love.astro'
+import Skills from '../layout/Skills.astro'
+import Portfolio from "../layout/Portfolio.astro";
+import Clients from "../layout/Clients.astro";
+import Team from "../layout/Team.astro"
+import Contact from "../layout/Contact.astro";
 ---
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
+		<Header />
+		<title>Leftshift</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Home />
+		<Love />
+		<Skills />
+		<Clients />
+		<Portfolio />
+		<Team />
+		<Contact />
+		<Footer />
 	</body>
 </html>

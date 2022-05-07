@@ -1,0 +1,22 @@
+---
+import "../styles/normalise.css";
+import "../styles/style.css";
+import "../styles/solarized_light.css";
+
+import Footer from '../layout/Footer.astro'
+import Header from '../layout/Header.astro'
+---
+<html>
+    <head>
+        <Header />
+        <title>404 | LeftShift</title>
+    </head>
+    <body>
+        <div class="back"><a href='/' itemprop="url">leftshift</a></div>
+        <div class="notfound">
+            <h1>404</h1>
+            <h3>This page was not found</h3>
+        </div>
+        <Footer />
+    </body>
+</html>

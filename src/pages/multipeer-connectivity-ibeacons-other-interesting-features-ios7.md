@@ -5,6 +5,7 @@ intro: With Multipeer Connectivity, nearby applications can discover, connect an
 author: Harshad Dange
 date: 28 March 2014
 tags: [ "ios", "multipeer-connectivity", "bluetooth", "ble", "ibeacons", "background-app-refresh", "ios7", "silent-push-notifications"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 With iOS 7, Apple introduced two new powerful frameworks -- _[Multipeer Connectivity](https://developer.apple.com/library/ios/documentation/MultipeerConnectivity/Reference/MultipeerConnectivityFramework/Introduction/Introduction.html)_ and _[iBeacons](http://en.wikipedia.org/wiki/IBeacon)_. Using these two technologies, it is possible to create applications that stay detached from the cloud, but still communicate with each other. With Multipeer Connectivity, nearby applications can discover, connect and exchange data between them _without being connected to an external network/WAN_. Moreover it works seamlessly over WiFi or Bluetooth on any iOS device with Bluetooth LE capabilities.

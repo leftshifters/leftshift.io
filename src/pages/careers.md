@@ -5,6 +5,7 @@ intro: So you think you would like to join us?
 author: All of us at Leftshift
 date: 01 January 2011
 tags: ["careers", "jobs"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 We are a Pune, India based company which specializes in the design and development of iOS and Android based applications and their backends.

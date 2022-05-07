@@ -1,0 +1,47 @@
+---
+import "../styles/normalise.css";
+import "../styles/style.css";
+import "../styles/solarized_light.css";
+
+import Footer from '../layout/Footer.astro'
+import Header from '../layout/Header.astro'
+
+const {content} = Astro.props;
+---
+<html>
+    <head>
+        <Header />
+        <title>{content.title} | The LeftShift Blog</title>
+        <meta name='description' content='{content.description}'>
+    </head>
+    <body>
+        <div class="back"><a href='/' itemprop="url">leftshift</a></div>
+        <div class="home"  style='padding: 20px 0px'>
+            <h1><a href="/blog">leftshift</a></h1>
+        </div>
+        <div class="blog-post">
+            <div class="box">
+                <h1>{content.title}</h1>
+                <div class="date">
+                    created on {content.date} and tagged under
+                    {content.tags.map(tag => <a href="/">{tag}</a> )}
+                </div>
+                <p>
+                    <slot />
+                </p>
+                <div class="meta">
+                    <div class="author">- {content.author}</div>
+                </div>
+                <br />
+                <div class="date" style="line-height: normal">
+                    We help companies create loveable apps for iOS, Android and the Web. If you would like to contact us for a consulation, a quote or to take us out for a beer, you can send us an email at <a href='mailto:pune@leftshift.io'>pune@leftshift.io</a>
+                    <br /><br />
+                    Like this post? Subscribe to our <a href='http://eepurl.com/Rclb1' target='_blank'>newsletter</a>
+                </div>
+            </div>
+        </div>
+        <Footer />
+        <script is:inline src='/javascripts/highlight.pack.js' />
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

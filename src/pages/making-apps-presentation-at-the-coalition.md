@@ -5,6 +5,7 @@ intro: Here are my slides from the workshop I did at the App Development and Mar
 author: Sudhanshu Raheja
 date: 15 March 2014
 tags: ["apps", "workshop", "ios", "android", "ideation", "thecoalition"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 <script async class="speakerdeck-embed" data-id="186a09f08e2d013171865e6b7054d712" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>

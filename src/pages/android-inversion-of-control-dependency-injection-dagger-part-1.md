@@ -5,6 +5,7 @@ intro: We evaluated testing framework for Android, set up continuous integration
 author: Gandharva Kumar
 date: 24 March 2014
 tags: ["android", "inversion-of-control", "dependency-injection", "dagger"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 During development cycles, software tests are often repeated with each incremental build to insure quality. For Android, it needs to be tested on each major resolution and each major version (of Android). Three years ago, we started with small apps which had simple requirements, but things changed majorly last year. The apps we made recently were complex and had ever changing requirements. Some of them are - _[NH7 InTown][1]_, _[BookMyShow][2]_ and _[StepJockey][3]_.

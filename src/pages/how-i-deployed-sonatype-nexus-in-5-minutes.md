@@ -5,6 +5,7 @@ intro: I was struggling with Sonatype Nexus for a week. After three failed attem
 author: Gandharva Kumar
 date: 29 December 2014
 tags: ["sonatype-nexus", "install", "android"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 I was struggling with [Sonatype Nexus][nexus] since a week. There was three failed attempt to deploy it. Here's how I finally got it to work

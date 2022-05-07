@@ -5,6 +5,7 @@ intro: There are some advantages that can only be achieved in JavaScript, implem
 author: Pranay Dubey
 date: 4 April 2014
 tags: ["javascript", "optimisation"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 It's been 2 years since I started working with javascript and in my opinion, it's probably the _best_ language to work with! I was a Java developer before and have worked on many other languages like C, C++, C# but what _amuses_ me about JavaScript is its flexibility which is because its _weakly typed_ (i.e you can provide a variable with any value and the type of the value becomes the type of the variable), there are _no classes_ (everything in JavaScript is an object, believe me) and many others intriguing things like these.

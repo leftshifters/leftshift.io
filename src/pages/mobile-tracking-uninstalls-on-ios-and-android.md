@@ -5,7 +5,7 @@ intro: One day, a user uninstalls your app. You don't know why she did it, you d
 author: Gandharva Kumar
 date: 31 July 2015
 tags: ["mobile", "tracking", "uninstalls", "ios", "android"]
-layout: ../layouts/BlogPostLayout.astro
+layout: ../layout/BlogPostLayout.astro
 ---
 
 You launch an app, invest a lot of resources, spend like crazy on marketing, add all types of analytics to track users' every click and analyze it. One day, a user uninstalls your app. You don't know why he did it, you don't have any way to get back to him and ask for a feedback.

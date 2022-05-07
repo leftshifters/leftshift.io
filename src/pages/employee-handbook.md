@@ -5,6 +5,7 @@ intro: This is a ready reckoner for our rules, policies and some of the things t
 author: All of us at Leftshift
 date: 02 January 2011
 tags: ["handbook", "rules", "company-policy"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 This is a ready reckoner for our rules, policies and some of the things that might need to know if you are working at Leftshift.

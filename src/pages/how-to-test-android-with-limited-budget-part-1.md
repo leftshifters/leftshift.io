@@ -5,6 +5,7 @@ intro: There are 1000s of Android phones out there, and it's not possible to get
 author: Sudhanshu Raheja
 date: 20 March 2014
 tags: ["android", "resolution"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 When we started working on Android apps three years ago, we just had two Android devices in office. The goal was to ensure that we designed and tested the apps on those two devices, and if it worked there, it was good enough to be sent to a client. Unfortunately, the strategy never worked. It was like trying to get your website to work well on IE5 on the Mac, there was always somebody who complained that it didn't work properly.

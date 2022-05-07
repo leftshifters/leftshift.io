@@ -5,6 +5,7 @@ intro: We started working with Angular.js recently and after spending a few days
 author: Sudhanshu Raheja
 date: 08 September 2012
 tags: ["angularjs", "tips", "development"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 We started working with Angular.js recently and after spending a few days on it, I realised that there a big need for beginner tutorials on it. I’ve tried to document some of the things you might need on day 1.

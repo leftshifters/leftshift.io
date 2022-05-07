@@ -5,6 +5,7 @@ intro: Here is the problem statement that we send out to people who apply for en
 author: All of us at Leftshift
 date: 03 January 2011
 tags: ["join", "problem"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 We love to challenge our candidates, so we ask that you complete this assignment as part of your application. You can take _as much time_ as you like to complete the assignment. Please get back to us whenever you're done.

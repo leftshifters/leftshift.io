@@ -5,6 +5,7 @@ intro: Here is the presentation I gave at Tech Talk @ Tokopedia in Jakarta
 author: Sudhanshu Raheja
 date: 07 Apr 2015
 tags: ["apps", "wireframes", "product", "pm", "design", "animations", "development", "testing" ]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 <script async class="speakerdeck-embed" data-id="f4436c27d3904991b99b27b0c80f8f24" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>

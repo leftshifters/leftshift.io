@@ -5,6 +5,7 @@ intro: It has been a while since we moved to using Sketch app, and ever since we
 author: Nishant Shirbhate
 date: 31 March 2014
 tags: ["design", "downloads", "sketch-app"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 ![Macaw](/images/blog/macaw.png)

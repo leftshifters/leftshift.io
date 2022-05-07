@@ -4,7 +4,8 @@ description: Abhishek from Leftshift talks about some general rules to help impr
 intro: There are good times and there are bad times. Making an app is always fun. What's not fun, is getting a brand new MotoX and watching your app run slower on it that the sad old samsung testing phone in office. It literally had me in tears the first time I saw it. And even though it was late in the evening, I decided to find out what I can do to fix it.
 author: Abhishek Birdawade
 date: 12 March 2014
-tags: ["android", "scrolling", "performance"],
+tags: ["android", "scrolling", "performance"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 There are good times and there are bad times. Making an app is always fun. What's not fun, is getting a brand new MotoX and watching your app run slower on it that the sad old samsung testing phone in office. It literally had me in tears the first time I saw it. And even though it was late in the evening, I decided to find out what I can do to fix it.

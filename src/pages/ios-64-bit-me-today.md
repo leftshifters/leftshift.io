@@ -5,7 +5,7 @@ intro: I always wondered why developers took so much time to put "64 bit support
 author: Harshad Dange
 date: 15 May 2015
 tags: ["ios", "64bit", "bugs"]
-layout: ../layouts/BlogPostLayout.astro
+layout: ../layout/BlogPostLayout.astro
 ---
 
 Apple has been pushing developers to include 64 bit support in their apps ever since they released the iPhone 5s. You currently cannot get your app in the store unless you include the 64 bit slice in the binary. As usual with Apple, this is an easy transition for developers -- just click a checkbox to include 64 bit support! And if you are using the latest Xcode, this is already done for you.

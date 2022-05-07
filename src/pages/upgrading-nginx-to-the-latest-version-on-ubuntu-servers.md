@@ -5,6 +5,7 @@ intro: If you're running nginx on an Ubuntu box, you would soon find out that th
 author: Sudhanshu Raheja
 date: 14 April 2014
 tags: ["nginx", "upgrade", "server"]
+layout: ../layout/BlogPostLayout.astro
 ---
 
 It has been years since we touched Apache. For the last few years, each and every one of our servers has had Nginx running on it. The last of our server which still runs apache is the one which runs our old website vxtindia.com.

@@ -1,0 +1,30 @@
+---
+import "../styles/normalise.css";
+import "../styles/style.css";
+import "../styles/solarized_light.css";
+
+import Footer from '../layout/Footer.astro'
+import Header from '../layout/Header.astro'
+import BlogPostPreview from '../layout/BlogPostPreview.astro'
+
+let allPosts = await Astro.glob('./*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+<html>
+    <head>
+        <Header />
+        <title>The LeftShift Blog</title>
+    </head>
+    <body>
+        <div class="back"><a href='/' itemprop="url">leftshift</a></div>
+        <div class="home"  style='padding: 20px 0px'>
+            <h1><a href="/blog">leftshift</a></h1>
+        </div>
+        <div class="blog">
+            <div class="box">
+                {allPosts.map((p) => <BlogPostPreview post={p} />)}
+            </div>
+        </div>
+        <Footer />
+    </body>
+</html>

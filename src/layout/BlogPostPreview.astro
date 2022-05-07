@@ -1,0 +1,13 @@
+---
+export interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+<h1><a href={post.url}>{post.frontmatter.title}</a></h1>
+<div class='meta'>
+    written by {post.frontmatter.author} on {post.frontmatter.date}
+</div>
+<p>{post.frontmatter.intro}</p>
+<hr />

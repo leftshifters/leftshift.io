@@ -11,5 +11,8 @@
   "devDependencies": {
     "astro": "^4.16.18"
   },
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": ">=23.11.0"
+  }
 }

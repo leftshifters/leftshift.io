@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "5.7.5"
+    "astro": "5.14.3"
   },
   "packageManager": "yarn@4.9.1",
   "engines": {
